@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FILMBOX - Página Oficial</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .badge {
+      background-color: #1e1e1e;
+      color: #6cff95;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 15px 0 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #ccc;
+      max-width: 500px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    ul {
+      text-align: left;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 0;
+      list-style: none;
+      color: #bbb;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "✔";
+      color: #6cff95;
+      position: absolute;
+      left: 0;
+    }
+
+    .btns {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(45deg, #ff006a, #9d4dff);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-secondary {
+      background-color: #1e1e1e;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .preview {
+      background-color: #1e1e1e;
+      width: 250px;
+      height: 500px;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 2px solid #2c2c2c;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    }
+
+    .preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Sección de instrucciones */
+    #como-instalar {
+      max-width: 500px;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #1e1e1e;
+      border-radius: 15px;
+      text-align: left;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .preview {
+        width: 200px;
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <span class="badge">Compatible con tu dispositivo</span>
+
+  <h1>FILMBOX - Entretenimiento sin límites</h1>
+  <p>Disfruta de películas y series al instante, sin anuncios molestos y con una interfaz sencilla y rápida. Ligera, segura y lista para usarse en segundos.</p>
+
+  <ul>
+    <li>Interfaz moderna y fácil de usar</li>
+    <li>Sin registro ni inicio de sesión</li>
+    <li>Ligera y rápida</li>
+    <li>Compatible con tu dispositivo</li>
+    <li>Instalación sencilla</li>
+  </ul>
+
+  <div class="btns">
+    <a href="https://www.mediafire.com/file/eu64acnw29zev6l/Filmbox-3.0.apk/file" class="btn-primary" id="btn-descargar">Descargar ahora</a>
+    <a href="" class="btn-secondary" id="btn-como-instalar">Cómo instalar</a>
+  </div>
+
+  <div class="preview">
+    <img src="https://i.postimg.cc/HWXbvSQf/Screenshot-20250821-155030-Kiwi-Browser.jpg" alt="Vista previa de FILMBOX">
+  </div>
+
+  <!-- Sección de instrucciones -->
+  <div id="como-instalar">
+    <h2>Cómo descargar e instalar FILMBOX</h2>
+    <ol>
+      <li>Haz clic en "Descargar ahora".</li>
+      <li>Se descargará un archivo APK en tu dispositivo.</li>
+      <li>Abre el archivo descargado y permite la instalación de fuentes desconocidas si tu dispositivo lo solicita.</li>
+      <li>Espera a que termine la instalación.</li>
+      <li>Abre FILMBOX y disfruta del contenido.</li>
+    </ol>
+  </div>
+
+  <script>
+    // Scroll suave solo para "Cómo instalar"
+    document.getElementById('btn-como-instalar').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('como-instalar').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+<!-- Footer estilo profesional con ícono junto al texto -->
+<style>
+#footerProfesional {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #0d0d0d; /* Fondo oscuro elegante */
+    color: #f1f1f1;            /* Texto claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía moderna */
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border-top: 1px solid #333; /* Línea sutil arriba del footer */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* espacio entre el icono y el texto */
+}
+#footerProfesional span.icon {
+    font-size: 16px;
+    font-weight: bold;
+}
+</style>
+
+<div id="footerProfesional">
+    <span class="icon">&copy;</span>
+    <span>FILMBOX 2025 – Todos los derechos reservados</span>
+</div>
+</div>
+</div>
+</body>
+</html>
